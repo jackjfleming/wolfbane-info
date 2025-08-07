@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Werewolf Rules Display</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Using a custom font for a more thematic feel */
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a; /* Dark background for TV viewing */
+            color: #f0f0f0;
+            overflow: hidden; /* Prevents scrollbars */
+        }
+        .slide {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 2rem 1rem;
+            opacity: 0;
+            transition: opacity 0.7s ease-in-out;
+            background-color: #1a1a1a;
+            overflow-y: auto; /* Allow scrolling for long descriptions */
+        }
+        .slide.active {
+            display: flex;
+            opacity: 1;
+        }
+        /* Custom colors for roles */
+        .villager { color: #3b82f6; }
+        .outsider { color: #a855f7; }
+        .minion { color: #f97316; }
+        .alpha-wolf { color: #ef4444; }
+
+        .slide-content ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .slide-content li {
+            margin-bottom: 1.25rem;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+        .ability-text {
+            font-size: 1.25rem;
+            line-height: 1.7;
+            text-align: left;
+            max-width: 65ch;
+        }
+        /* Styles for formatted lists within ability descriptions */
+        .ability-text ul {
+            list-style-type: disc;
+            list-style-position: outside;
+            padding-left: 1.75rem;
+            margin-top: 1rem;
+        }
+        .ability-text li {
+            font-size: 1.2rem;
+            padding-left: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        @media (min-width: 768px) {
+             .slide-content > ul > li { /* Target only the top-level list items */
+                font-size: 2rem;
+             }
+             .ability-text {
+                font-size: 1.5rem;
+             }
+             .ability-text li {
+                font-size: 1.4rem;
+             }
+             .slide {
+                padding: 4rem 2rem;
+             }
+        }
+        /* Styling for the navigation controls */
+        .controls {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background-color: rgba(0,0,0,0.5);
+            padding: 0.5rem 1rem;
+            border-radius: 9999px;
+            z-index: 100;
+        }
+        .control-btn {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background-color 0.2s;
+        }
+        .control-btn:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        #progress-bar-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: rgba(255,255,255,0.2);
+            z-index: 99;
+        }
+        #progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #3b82f6;
+            transition: width 0.1s linear;
+        }
+    </style>
+</head>
+<body class="w-screen h-screen">
+
+    <!-- Slides Container -->
+    <main id="slides-container">
+
+        <!-- Slide 1: Title -->
+        <div class="slide active">
+            <div class="m-auto text-center">
+                <h1 class="text-6xl md:text-8xl font-bold mb-4">Werewolf</h1>
+                <p class="text-4xl md:text-6xl text-gray-300">Trouble Brewing Edition</p>
+            </div>
+        </div>
+
+        <!-- Slide 2: Executions -->
+        <div class="slide">
+            <div class="m-auto text-left max-w-5xl slide-content">
+                <h1 class="text-5xl md:text-7xl font-bold mb-12 text-center">Executions</h1>
+                <ul>
+                    <li>Only alive players may nominate. Dead players may be nominated.</li>
+                    <li>Each player can only nominate and be nominated once per day.</li>
+                    <li>Alive players can vote as many times as they want, but dead players only have one vote for the rest of the game.</li>
+                    <li>The vote succeeds if votes equal or exceed half the number of alive players (rounded up).</li>
+                    <li>A player is executed if they receive more votes than anyone else. No execution on a tie.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 3: Death is Not the End -->
+        <div class="slide">
+            <div class="m-auto text-center max-w-4xl slide-content">
+                <h1 class="text-5xl md:text-7xl font-bold mb-12">Death is Not the End</h1>
+                <ul>
+                    <li>You can (and should!) talk.</li>
+                    <li>You must close your eyes at night.</li>
+                    <li>You cannot nominate.</li>
+                    <li>You have one vote for the rest of the game.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: Travelers -->
+        <div class="slide">
+            <div class="m-auto text-left max-w-5xl slide-content">
+                <h1 class="text-5xl md:text-7xl font-bold mb-12 text-center">Travelers</h1>
+                <ul>
+                    <li>Travelers count as alive for voting numbers, but not for win conditions or setup.</li>
+                    <li>Travelers can be exiled after nominations are open.</li>
+                    <li>Exiling doesn't count as a normal nomination, vote, or execution.</li>
+                    <li>A majority of ALL players (alive and dead) is required for exile.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Role Slides will be injected here by JavaScript -->
+
+    </main>
+
+    <!-- Navigation Controls -->
+    <div class="controls">
+        <button id="prev-btn" class="control-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+            </svg>
+        </button>
+        <button id="play-pause-btn" class="control-btn">
+            <!-- Pause Icon -->
+            <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5A1.5 1.5 0 0 1 5.5 3.5zm4 0A1.5 1.5 0 0 1 11 5v6a1.5 1.5 0 0 1-3 0V5A1.5 1.5 0 0 1 9.5 3.5z"/>
+            </svg>
+            <!-- Play Icon (hidden by default) -->
+            <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="hidden" viewBox="0 0 16 16">
+                <path d="M10.804 8 5 4.633v6.734L10.804 8z"/>
+            </svg>
+        </button>
+        <button id="next-btn" class="control-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+            </svg>
+        </button>
+    </div>
+    
+    <!-- Progress Bar -->
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Data for all the roles in Trouble Brewing, now with HTML formatting and custom names
+            const roles = [
+                // Villager
+                { name: 'Housekeeper', team: 'Villager', ability: `You start knowing that a specific Villager is in play, but not who is playing them. <ul><li>During the first night, you are woken, shown two players, and learn the character of one of them.</li><li>You learn this only once.</li></ul>` },
+                { name: 'Librarian', team: 'Villager', ability: `You start knowing that a particular Outsider character is in play, but not who it is.<ul><li>During the first night, you learn that one of two players is a specific Outsider.</li><li>You learn this only once.</li><li>If you learn about the Village Idiot, you do not learn the Villager they think they are.</li></ul>` },
+                { name: 'Investigator', team: 'Villager', ability: `You start knowing that a particular Minion character is in play, but not who it is.<ul><li>During the first night, you learn that one of two players is a specific Minion.</li><li>You learn this only once.</li></ul>` },
+                { name: 'Chef', team: 'Villager', ability: `You know if evil players are sitting next to each other.<ul><li>On the first night, you learn the exact number of pairs of adjacent evil players.</li><li>A "pair" is two adjacent players. Three in a row is two pairs, four is three pairs, etc.</li><li>Detects evil Travelers, but only if they joined before you act.</li></ul>` },
+                { name: 'Empath', team: 'Villager', ability: `Each night, you learn how many of your two alive neighbors are evil.<ul><li>You only learn the number, not which neighbor is evil.</li><li>If a neighbor is dead, your ability checks the next alive player in that direction.</li><li>You act after the Alpha Wolf, so your information is accurate as of the morning.</li></ul>` },
+                { name: 'Seer', team: 'Villager', ability: `You can detect the Alpha Wolf, but a good player may seem like an Alpha Wolf to you.<ul><li>Each night, choose two players. You learn if at least one is an Alpha Wolf.</li><li>You do not learn *which* one is the Alpha Wolf, just that an Alpha Wolf is present.</li><li>A "Red Herring" good player will always register as an Alpha Wolf to you. You don't know who this is.</li><li>You may choose any two players: alive, dead, or even yourself.</li></ul>` },
+                { name: 'Gravedigger', team: 'Villager', ability: `You learn the character of players who are executed.<ul><li>You only learn about players killed by execution, not by other means.</li><li>You wake each night *except the first*.</li><li>If nobody is executed, you learn nothing.</li><li>If the Village Idiot is executed, you are shown the Village Idiot token.</li></ul>` },
+                { name: 'Bodyguard', team: 'Villager', ability: `You protect other players from the Alpha Wolf.<ul><li>Each night except the first, you may choose one player (not yourself) to protect.</li><li>If the Alpha Wolf attacks your chosen player, that player does not die.</li><li>The Alpha Wolf's attack is simply cancelled for the night; they don't get a re-do.</li><li>This does not protect from execution.</li></ul>` },
+                { name: 'Ravenkeeper', team: 'Villager', ability: `If you die at night, you get to learn one player's character.<ul><li>You are woken on the night that you die to make your choice.</li><li>You may choose any player, alive or dead.</li></ul>` },
+                { name: 'New in Town', team: 'Villager', ability: `Your nomination can expose and execute a fellow Villager.<ul><li>If a Villager nominates you, they are executed immediately.</li><li>The nomination process ends for the day.</li><li>If an Outsider, Minion, or Alpha Wolf nominates you, nothing happens.</li><li>Your ability is lost after you are nominated for the first time, regardless of the outcome.</li></ul>` },
+                { name: 'Hunter', team: 'Villager', ability: `Once per game, you may be able to kill the Alpha Wolf.<ul><li>During the day, you can publicly declare you are using your ability on a player.</li><li>If you choose the Alpha Wolf, they die immediately. Otherwise, nothing happens.</li><li>The dead player's identity is not revealed.</li><li>Using your ability while poisoned or drunk wastes it.</li></ul>` },
+                { name: 'Soldier', team: 'Villager', ability: `You are safe from the Alpha Wolf.<ul><li>You cannot be killed by the Alpha Wolf's nightly attack.</li><li>If the Alpha Wolf targets you, nobody dies that night.</li><li>You can still be executed.</li></ul>` },
+                { name: 'Mayor', team: 'Villager', ability: `You can bring about a peaceful victory for the good team.<ul><li>If you are attacked at night, the Storyteller may choose for another player to die instead.</li><li>If there are 3 players left alive and no execution happens, the game ends and good wins.</li><li>Travelers count as players for your win condition and must be exiled first.</li></ul>` },
+                // Outsiders
+                { name: 'Butler', team: 'Outsider', ability: `You must vote when your chosen Master votes.<ul><li>Each night, you choose a player to be your Master for the next day.</li><li>You may only have your hand up to vote if your Master's hand is also up.</li><li>You are responsible for following this rule, not the Storyteller.</li><li>You can vote freely during exiles. You are never forced to vote.</li></ul>` },
+                { name: 'Village Idiot', team: 'Outsider', ability: `You think you are a Villager, but you are not.<ul><li>You do not know you are the Village Idiot. You have a Villager token.</li><li>Your "ability" doesn't work.</li><li>The Storyteller pretends your ability works, waking you at night as normal and possibly giving you false information.</li></ul>` },
+                { name: 'Recluse', team: 'Outsider', ability: `You are good, but you might appear to be evil.<ul><li>When your alignment or character is checked, the Storyteller decides if you register as good, evil, or even a specific evil character.</li><li>This can change from one moment to the next.</li><li>Registering as a character does not grant you their ability.</li></ul>` },
+                { name: 'Saint', team: 'Outsider', ability: `Your execution means victory for the evil team.<ul><li>If you die by execution, the game ends immediately and evil wins.</li><li>If you die by any other means (like an Alpha Wolf attack), the game continues.</li></ul>` },
+                // Minions
+                { name: 'Poisoner', team: 'Minion', ability: `You secretly disrupt other players' abilities.<ul><li>Each night, choose a player. They are poisoned for that night and the entire next day.</li><li>A poisoned player's ability fails, but the Storyteller will pretend it works, possibly giving them false information.</li><li>Using a "once per game" ability while poisoned wastes it.</li></ul>` },
+                { name: 'Spy', team: 'Minion', ability: `You see everything, and you can hide in plain sight.<ul><li>Each night, you get to look at the Grimoire.</li><li>When other players' abilities check you, you might register as good, or as a specific Villager or Outsider.</li><li>The Storyteller decides how you register.</li><li>Registering as a character does not grant you their ability.</li></ul>` },
+                { name: 'Successor', team: 'Minion', ability: `When the Alpha Wolf dies, you may become the new Alpha Wolf.<ul><li>If the Alpha Wolf dies and 5 or more players are alive, you secretly become the Alpha Wolf.</li><li>Travelers do not count towards the 5+ players.</li><li>If the Alpha Wolf kills themself at night with 5+ players alive, you *must* become the new Alpha Wolf.</li></ul>` },
+                { name: 'Baron', team: 'Minion', ability: `You make the game harder for the good team from the start.<ul><li>During setup, two Outsiders are added to the game.</li><li>These Outsiders replace two Villager.</li><li>This change is permanent, even if you die.</li></ul>` },
+                // Alpha Wolf
+                { name: 'Alpha Wolf', team: 'Alpha Wolf', ability: `You kill each night, but can sacrifice yourself to pass on the curse.<ul><li>Each night except the first, choose a player. They die.</li><li>You know your Minions and three not-in-play good characters to bluff as.</li><li>If you die, good wins... unless you kill yourself at night.</li><li>If you kill yourself, an alive Minion becomes the new Alpha Wolf. The new Alpha Wolf does not act on the night they are promoted.</li></ul>` }
+            ];
+
+            const slidesContainer = document.getElementById('slides-container');
+            const teamColorMap = {
+                'Villager': 'villager',
+                'Outsider': 'outsider',
+                'Minion': 'minion',
+                'Alpha Wolf': 'alpha-wolf'
+            };
+
+            // This function creates a slide for each role and adds it to the page
+            roles.forEach(role => {
+                const slideEl = document.createElement('div');
+                slideEl.className = 'slide';
+                // Use a div for ability-text to allow for block elements like <ul>
+                slideEl.innerHTML = `
+                    <div class="m-auto text-center max-w-5xl slide-content">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4 ${teamColorMap[role.team]}">${role.name}</h1>
+                        <p class="text-2xl md:text-4xl mb-6 text-gray-400">${role.team}</p>
+                        <div class="ability-text">${role.ability}</div>
+                    </div>
+                `;
+                slidesContainer.appendChild(slideEl);
+            });
+
+            // --- Slideshow Logic ---
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const playPauseBtn = document.getElementById('play-pause-btn');
+            const playIcon = document.getElementById('play-icon');
+            const pauseIcon = document.getElementById('pause-icon');
+            const progressBar = document.getElementById('progress-bar');
+            
+            let currentSlide = 0;
+            let isPlaying = true;
+            const slideInterval = 15000; // 15 seconds per slide
+            let slideTimer;
+            let progressTimer;
+
+            // Function to display a specific slide
+            function showSlide(index) {
+                // Reset scroll position of the old slide
+                if (slides[currentSlide]) {
+                    slides[currentSlide].scrollTop = 0;
+                }
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                    if (i === index) {
+                        slide.classList.add('active');
+                    }
+                });
+            }
+
+            // Function to go to the next slide
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+                resetTimer();
+            }
+
+            // Function to go to the previous slide
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+                resetTimer();
+            }
+
+            // This function animates the progress bar at the bottom
+            function updateProgressBar() {
+                let startTime = Date.now();
+                clearInterval(progressTimer);
+                
+                if(isPlaying) {
+                    progressTimer = setInterval(() => {
+                        const elapsedTime = Date.now() - startTime;
+                        const width = (elapsedTime / slideInterval) * 100;
+                        progressBar.style.width = `${width}%`;
+                        if (width >= 100) {
+                            clearInterval(progressTimer);
+                        }
+                    }, 100);
+                }
+            }
+
+            // This function resets the autoplay timer and progress bar
+            function resetTimer() {
+                clearTimeout(slideTimer);
+                clearInterval(progressTimer);
+                progressBar.style.transition = 'none'; // Disable transition for instant reset
+                progressBar.style.width = '0%';
+                progressBar.offsetHeight; // Force browser to repaint, making the reset instant
+                progressBar.style.transition = 'width 0.1s linear'; // Re-enable for the next animation
+                
+                if (isPlaying) {
+                    slideTimer = setTimeout(nextSlide, slideInterval);
+                    updateProgressBar();
+                }
+            }
+
+            // Function to toggle between play and pause states
+            function togglePlayPause() {
+                isPlaying = !isPlaying;
+                if (isPlaying) {
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                    resetTimer();
+                } else {
+                    pauseIcon.classList.add('hidden');
+                    playIcon.classList.remove('hidden');
+                    clearTimeout(slideTimer);
+                    clearInterval(progressTimer);
+                }
+            }
+
+            // --- Event Listeners ---
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            playPauseBtn.addEventListener('click', togglePlayPause);
+            
+            // Allow keyboard navigation with arrow keys and spacebar
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') {
+                    nextSlide();
+                } else if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                } else if (e.key === ' ') { // Spacebar to play/pause
+                    e.preventDefault(); // Prevents the page from scrolling on spacebar press
+                    togglePlayPause();
+                }
+            });
+
+            // Initial setup when the page loads
+            showSlide(currentSlide);
+            resetTimer();
+        });
+    </script>
+</body>
+</html>
