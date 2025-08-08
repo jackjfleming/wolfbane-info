@@ -49,6 +49,10 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
+
+        .role-icon {
+            filter: invert(1) brightness(1.2);
+        }
     </style>
 </head>
 <body class="min-h-screen">
@@ -510,7 +514,7 @@
                                                                 "Use your ability as early as you possibly can! Evil players will really not want to keep you around, so getting your ability to trigger as soon as possible will give you an edge. Additionally, it is more likely that players who die early in the game will be good Townsfolk, since they are in the majority and evil will be protecting each other.",
                                                                 "Use your ability as late in the game as you dare! While risky, you can't underestimate how disruptive the resurrection of a confirmed Townsfolk at the end of the game can be for the evil team. The good team will be able to rally around both you and your revived Townsfolk, and the evil team will have a lot less options for disguising themselves as the game has worn on.",
                                                                 "Remember that if your ability fails, the dead player is either evil or an Outsider. Don't jump to conclusions right away - you could've targeted the Recluse or the Spy!",
-                                                                "Resurrect players who died at night, rather than players who were executed. It's not as sure a thing as in other editions, but players who die at night were probably targeted by the Alpha Wolf, and are therefore most likely good.",
+                                                                "Resurrect players who died at night, rather than players who were executed. Players who die at night were probably targeted by the Alpha Wolf, and are therefore most likely good.",
                                                                 "Resurrect executed players if you believe the town has made a mistake! If your ability works, you have absolved an innocent townsfolk. If it doesn't, well, you can be very sure that they were right to execute them the first time. (Bonus strategy: Reveal yourself to a player you believe to be good, and ask them to be deliberately executed so you can bring them back, proving both of you. Especially effective early in the game!)",
                                                                 "Successfully resurrect a townsfolk, and you are going to be one of the more trustworthy good players in the game. While you won't be totally free of suspicion, you and your revived Townsfolk will know you can trust each other 100%, and most other players will want to join your circle! Use this to your advantage to rally the good team in the face of evil.",
                                                                 "When picking who to resurrect, consider telling the player ahead of time what you intend to do. The player can warn you off if they are an outsider who is bluffing as a townsfolk for whatever reason. Additionally, if the player agrees to go along with this plan and doesn't come back, you can be much more confident that they are evil, since they had the chance to stop you and didn't!"
@@ -959,19 +963,61 @@
                 ]
 };
 
+        // Map each role name to its corresponding image path
+        const roleImageMap = {
+            'Housekeeper': 'images/Housekeeper.svg',
+            'Librarian': 'images/Librarian.svg',
+            'Investigator': 'images/Investigator.svg',
+            'Chef': 'images/Chef.svg',
+            'Empath': 'images/Empath.svg',
+            'Seer': 'images/Seer.svg',
+            'Gravedigger': 'images/Gravedigger.svg',
+            'Bodyguard': 'images/Bodyguard.svg',
+            'Ravenkeeper': 'images/Ravenkeeper.svg',
+            'New in Town': 'images/New in Town.svg',
+            'Hunter': 'images/Hunter.svg',
+            'Soldier': 'images/Soldier.svg',
+            'Mayor': 'images/Mayor.svg',
+            'Butler': 'images/Butler.svg',
+            'Village Idiot': 'images/Village Idiot.svg',
+            'Recluse': 'images/Recluse.svg',
+            'Saint': 'images/Saint.svg',
+            'Poisoner': 'images/Poisoner.svg',
+            'Spy': 'images/Spy.svg',
+            'Successor': 'images/Successor.svg',
+            'Baron': 'images/Baron.svg',
+            'Alpha Wolf': 'images/Fenrir.svg', // using Fenrir art for Alpha Wolf
+            'Klutz': 'images/Klutz.svg',
+            'Professor': 'images/Professor.svg',
+            'Artist': 'images/Artist.svg',
+            'Evil Twin': 'images/Evil Twin.svg',
+            'Butcher': 'images/Butcher.svg',
+            'Gangster': 'images/Gangster.svg',
+            'Scapegoat': 'images/Scapegoat.svg',
+            'Gunslinger': 'images/Gunslinger.svg',
+            'Beggar': 'images/Beggar.svg',
+            'Bureaucrat': 'images/Bureaucrat.svg',
+            'Thief': 'images/Thief.svg'
+        };
+
         function createRoleCard(role, type) {
             const colorClass = {
                 'Townsfolk': 'villager',
-                'Outsider': 'outsider', 
+                'Outsider': 'outsider',
                 'Minion': 'minion',
                 'Alpha Wolf': 'alpha-wolf',
                 'Traveler': 'traveler'
             }[type] || 'villager';
-            
+
+            const iconSrc = roleImageMap[role.name] || 'images/Artist.svg';
+
             return `
-                <a href="roles/${role.name.replace(/\s+/g, '-').toLowerCase()}.html" 
+                <a href="roles/${role.name.replace(/\s+/g, '-').toLowerCase()}.html"
                    class="role-card block p-4 bg-gray-800 rounded-lg ${colorClass} no-underline">
-                    <h3 class="text-lg font-semibold mb-2">${role.name}</h3>
+                    <div class="flex items-center mb-3">
+                        <img src="${iconSrc}" alt="${role.name}" class="role-icon w-12 h-12 mr-3 object-contain">
+                        <h3 class="text-lg font-semibold">${role.name}</h3>
+                    </div>
                     <p class="text-sm opacity-80">${role.summary}</p>
                 </a>
             `;
