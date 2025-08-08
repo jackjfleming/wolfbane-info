@@ -457,113 +457,8 @@
         "If you are good player, bluffing as a Professor that has used their ability (and nothing happened) can be a great way to stay alive long enough to use your actual ability. Demons are usually not interested in attacking Professors that have lost their ability, since they are no longer a threat. For example, if you are the Courtier, but want to ensure that you survive long enough to use your drunking ability, claiming to be a Professor that no longer has an ability will usually let you live long enough to do so."
       ]
     },
-    {
-      "name": "Beggar",
-      "type": "Traveler",
-      "summary": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment.",
-      "howToRun": "The Beggar cannot vote unless they have a vote token. They lose one vote token each time they vote. During the day, a dead player can declare that they give their vote token to the Beggar. Transfer the vote token to the Beggar and privately tell the Beggar the alignment of that player.",
-      "examples": [
-        "The Beggar cannot vote. On the fourth day, the Bodyguard gives her vote token to the Beggar. The Beggar may now vote (once), and learns that the player is good. The Beggar is evil and tells the group that the Bodyguard player is evil.",
-        "The good Beggar has three vote tokens. The Recluse gives the Beggar their vote token, and the Beggar learns that they are evil. That day, the Beggar dies, and loses all their vote tokens except for one."
-      ],
-      "tipsAndTricks": [
-        "Learn the alignment of as many players as possible. Take vote tokens from as many players as possible. Even though by talking to the Demon you can learn the alignments of all players quickly, the more players that give you their vote tokens, the more players will not be able to vote on the final day. You'll be able to vote as much as you want, and that is a powerful enough ability to win the game. Good players often don't realize how powerful their dead vote is - 1 player giving it away to an evil Beggar might not make much difference, but 4 players doing so will make a huge difference.",
-        "If you are good, you can use your ability to confirm the alignment of dead players. This is particularly useful for confirming whether executed players were good or evil, which can help you determine the trustworthiness of living players.",
-        "As a good Beggar, be selective about whose vote tokens you accept. Taking tokens from players you suspect are evil can help confirm your suspicions, while taking tokens from confirmed good players can give you extra voting power.",
-        "If you're evil, try to convince good players to give you their vote tokens by claiming you need them to help execute evil players. This reduces the good team's voting power while increasing yours.",
-        "Remember that you lose all your accumulated vote tokens if you die, except for the one token you get as a dead player. Use your tokens strategically before you might be executed.",
-        "Your ability to learn alignments can help you identify the Recluse, who will register as evil to you despite being good.",
-        "If you're having trouble getting vote tokens, consider revealing your character early to build trust with the good team."
-      ],
-      "bluffingAs": [
-        "As an evil Beggar, you can claim to have learned that good players are evil, sowing confusion and mistrust among the good team.",
-        "You can also claim to have learned that evil players are good, helping to protect your teammates from suspicion.",
-        "If you're not the Beggar but claiming to be one, remember that you would need vote tokens to vote, so you'll need to explain why you can vote without them (perhaps claiming someone gave you tokens privately).",
-        "The Beggar's need for vote tokens makes it a somewhat difficult bluff to maintain, as your voting behavior will be scrutinized.",
-        "You can use the Beggar claim to explain why you're not voting much, or to justify asking for vote tokens from dead players."
-      ]
-    },
-    {
-      "name": "Gangster",
-      "type": "Traveler",
-      "summary": "Once per day, you may choose to kill 1 of your 2 alive neighbors, if your other alive neighbor agrees.",
-      "howToRun": "Once per day, the Gangster can declare that they wish to use their ability. If so, ask if an alive neighbor agrees. If an alive neighbor agrees, the other alive neighbor dies. If both alive neighbors agree, the Gangster chooses which alive neighbor dies. If neither alive neighbor agrees, the Gangster may not use their ability today.",
-      "examples": [
-        "The Gangster sits between the Empath and the Seer. The Gangster asks the Empath if they want to kill the Seer. The Empath agrees. The Seer dies.",
-        "The Gangster sits between the Alpha Wolf and the Saint. Both players want the other dead. The Gangster chooses to kill the Saint.",
-        "The Gangster sits between two good players. Neither wants to kill the other. The Gangster cannot use their ability today."
-      ],
-      "tipsAndTricks": [
-        "Find out the characters of your living neighbours. They will know you are the Gangster. It is best if you know their characters too. Learn what they are before making any rash decisions on who to kill.",
-        "Talk to each living neighbour. Convince them to 'give you permission' to kill the other player, even if they think the other player is good. You are good, so being able to kill either living neighbour at any time is a powerful, and hopefully helpful, option to have.",
-        "If one of your neighbours is evil, and the other is good, try to convince the good player to let you kill the evil player. This is usually not too difficult.",
-        "If both your neighbours are good, you may still want to kill one of them. If one neighbour is a character that has already used their ability (such as the Chef or Housekeeper), and the other is a character that gets information each night (such as the Empath or Seer), then killing the first player and keeping the second player alive is usually the best option.",
-        "If both your neighbours are evil, kill either one. It doesn't matter which.",
-        "If you are not sure of the alignment of your neighbours, you can kill the player that is most suspicious, or the player that the group wants to execute today. If you kill a player instead of them being executed, then the day continues and a different player may be executed later.",
-        "You can use your ability to prevent executions. If the group is about to execute a player that you think is good, and that player is your neighbour, you can kill your other neighbour instead. This ends the nomination and execution process for your neighbour, and the day continues.",
-        "You can use your ability to confirm the identity of your neighbours. If you kill a neighbour, and they had a 'when you die' ability that activates, then you know that they were that character. For example, if you kill a player, and the Ravenkeeper ability activates, then you know your neighbour was the Ravenkeeper."
-      ],
-      "bluffingAs": [
-        "If you are evil, you will want to kill good players, not evil players. However, you will need to be subtle about it, since the good team will be watching to see which players you choose to kill.",
-        "If both your neighbours are good, try to convince one to let you kill the other. You can claim that the player you want to kill is suspicious, or that they are not contributing much to the good team.",
-        "If one of your neighbours is evil, you may want to kill them anyway, to make yourself look good. However, this means that your evil team loses a player, so be careful.",
-        "Every so often, it is better for the evil team if certain characters die by execution. Characters such as the Good Twin or the Saint lose the game for the good team if executed, so it is best to not kill them using your Gangster ability.",
-        "If you suspect that a good neighbour is about to be nominated and executed, don't kill them with your Gangster ability today. A death by the Gangster's ability doesn't count as an execution, and the day will continue afterwards.",
-        "You can use your Gangster ability to save evil players from execution. If an evil player is your neighbour and is about to be executed, you can kill your other neighbour instead, which will end the nomination process.",
-        "Pay attention to which of your neighbours wants to kill the other. If a good player is eager to kill another good player, they might be the Village Idiot, or they might have been given false information by the Poisoner."
-      ]
-    },
-    {
-      "name": "Bureaucrat",
-      "type": "Traveler",
-      "summary": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
-      "howToRun": "Each night, wake the Bureaucrat. They point at any player. Mark the chosen player with the Bureaucrat's 3 VOTES reminder. Put the Bureaucrat to sleep. Each time you tally the vote of a player marked 3 VOTES, count it as three votes instead of one. (Count this out loud, as normal.)",
-      "examples": [
-        "The Bureaucrat chooses Evin. The next day, when the first vote is being tallied, the Storyteller counts '1... 2... 3... 4-5-6... 7.' The nominated player now has seven votes for their execution, and the nomination process continues.",
-        "The Bureaucrat chooses Filip. The next day, Filip has a triple vote, which he uses during four nominations.",
-        "The Bureaucrat chooses Douglas, who is dead. The next day, Douglas uses his vote token to vote, and his vote counts as triple."
-      ],
-      "tipsAndTricks": [
-        "When picking who to give your extra votes to, prioritize living players. Dead players get a single vote for the rest of the game, and will be reluctant to spend it before a critical moment, even with your ability giving them an extra punch.",
-        "Find a good player you trust or who has been confirmed in some way, and pair up with them. Characters like a New in Town who has caused an execution or anyone confirmed by a Housekeeper are great options of trustworthy players you can work with.",
-        "Watch how people vote, especially the people you choose. Depending on who is on the chopping block, players will change their vote - it's very unlikely that a Minion would vote for their Demon knowing they have 3 votes.",
-        "Ask the town to help you choose who the person that receives your extra votes should be! If you don't have any strong leads on a reliable good player to trust, crowd-sourcing a solution will not only help the town trust you, but uncover good potential options for you to pick.",
-        "Communicate with the town about who you have picked - not only does keeping an open and honest policy help the town believe that you have a good alignment, but it helps the group when coordinating information and votes to get someone killed.",
-        "Deliberately lie about who you picked so that you can observe the behaviour of the player you 'picked'. While secretly giving your votes to a trustworthy player, pick someone who you want more of a read on, and see how they behave when they think they have extra voting power.",
-        "You are especially deadly on the final night - your ability means that one person can single-handedly kick off an execution. If you choose an evil player, good will have to work extra hard to make up the difference."
-      ],
-      "bluffingAs": [
-        "Don't choose evil players ALL the time - that will look too suspicious. If you just choose the Demon over and over again, the good team has reason to believe that you are evil, as good Bureaucrats tend to change their minds more often.",
-        "Another strategy is to choose good players until the perfect moment arises. This works best if the players you choose for the first half of the game are not only good, but believed to be good by the group.",
-        "Choose an evil player on the final day. Although it might be tempting to choose a good player on the final day, so that you look more trustworthy, a good player having triple voting power is a huge danger to your team.",
-        "Choose dead evil players, if you can justify your reason for doing so. The dead are generally more trustworthy than the living, so giving a dead Minion triple votes not only helps your image, but gets that brutal extra two votes for the evil teams' desired nominee."
-      ]
-    },
-    {
-      "name": "Butcher",
-      "type": "Traveler",
-      "summary": "Each day, after the 1st execution, you may nominate again.",
-      "howToRun": "Each day, immediately after a player is executed, the Butcher may nominate a player for execution. (Remind them if needed.) To succeed, this nomination must tally votes of at least half the alive players, as normal, but does not have to exceed the votes of the execution that prompted the Butcher ability. If this second execution succeeds, it does not allow the Butcher to nominate a third player.",
-      "examples": [
-        "The Witch is executed and dies. The Butcher then nominates the Sage, who gets enough votes to be executed. The Sage dies too.",
-        "The Bone Collector is exiled, and then the Harlot is exiled. There are no executions today. The Butcher does not get to nominate again, because exiles are not executions.",
-        "The Butcher nominates the Town Crier, but the Town Crier is not executed. The Mathematician gets more votes and is executed today. The game continues, and the Butcher nominates the Town Crier again. This time, enough hands are raised, and the Town Crier is executed."
-      ],
-      "tipsAndTricks": [
-        "Only nominate players that you think you can execute. Executing 2 players per day is extremely helpful to the good team. Instead of 1 player dying during the day by the choice of the group and 1 player dying at night (by the choice of the Demon), there will be 2 players dying per day by the choice of the group for every player that dies at night by choice of the Demon.",
-        "During the normal voting process, pay attention to which players get a lot of votes, but are not executed, and which players don't get many votes, but are not executed. Players that get an overwhelming number of votes are unlikely to be the Demon, since Minions rarely vote for the Demon in such dangerous circumstances.",
-        "If the group keeps failing to vote for the players that you nominate, or if the group is talking about exiling you, then you can make a deal with them - you will nominate who they want you to nominate. Staying alive is better than being dead, even if it means that you go with the group's guesses instead of your own.",
-        "If there is an Evil Twin in the game, be much more frugal with your nominations. If the Demon and the Evil Twin are both still alive when just 3 players are alive, it is possible that evil has already won.",
-        "If the Witch curses you, this is great news! An Evil Witch will definitely want to keep an evil Butcher alive, so that fact that the Witch cursed you instead of a much more valuable target, basically confirms to the group that you are good."
-      ],
-      "bluffingAs": [
-        "Nominate. Nominate. Nominate. Vote. Vote. Vote. If you can secure an extra successful execution each day, then an evil victory is basically certain. Evil Butchers are incredibly dangerous.",
-        "You know who the Demon is. Never nominate them using your ability. If even half the group votes, no other nominees can be nominated to exceed that tally, so there is no way to fix a foolish mistake.",
-        "If you really, really think that the good team trusts the Demon player, nominate them using your ability. You need to be certain that even half the group won't vote for the Demon, and be prepared for the good team to think that you are evil.",
-        "Nominate Minions using your ability. Or don't. Whatever you think is best.",
-        "If an Evil Twin, a Witch, or a Cerenovus are in play, co-ordinate with them to see if you can quickly get the number of living players to just 3 - the Evil Twin, the good twin, and the Demon. At this point, evil has usually already won."
-      ]
-    }
+
+
   ],
   "outsiders": [
     {
@@ -846,6 +741,95 @@
     }
   ],
   "travelers": [
+    {
+      "name": "Beggar",
+      "type": "Traveler",
+      "summary": "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment.",
+      "howToRun": "The Beggar cannot vote unless they have a vote token. They lose one vote token each time they vote. During the day, a dead player can declare that they give their vote token to the Beggar. Transfer the vote token to the Beggar and privately tell the Beggar the alignment of that player.",
+      "examples": [
+        "The Beggar cannot vote. On the fourth day, the Bodyguard gives her vote token to the Beggar. The Beggar may now vote (once), and learns that the player is good. The Beggar is evil and tells the group that the Bodyguard player is evil.",
+        "The good Beggar has three vote tokens. The Recluse gives the Beggar their vote token, and the Beggar learns that they are evil. That day, the Beggar dies, and loses all their vote tokens except for one."
+      ],
+      "tipsAndTricks": [
+        "Learn the alignment of as many players as possible. Take vote tokens from as many players as possible. Even though by talking to the Demon you can learn the alignments of all players quickly, the more players that give you their vote tokens, the more players will not be able to vote on the final day. You'll be able to vote as much as you want, and that is a powerful enough ability to win the game. Good players often don't realize how powerful their dead vote is - 1 player giving it away to an evil Beggar might not make much difference, but 4 players doing so will make a huge difference.",
+        "If you are good, you want to learn the alignment of as many players as possible. This information is incredibly valuable to the good team. However, be careful about who you share this information with - evil players might try to mislead you about their alignment.",
+        "You can use your vote tokens strategically. Save them for crucial votes, especially on the final day when every vote counts.",
+        "Be aware that evil players might try to give you their vote tokens to learn false information about their alignment. Use other information sources to verify what you learn."
+      ],
+      "bluffingAs": [
+        "The Beggar's need for vote tokens makes it a somewhat difficult bluff to maintain, as your voting behavior will be scrutinized.",
+        "You can use the Beggar claim to explain why you're not voting much, or to justify asking for vote tokens from dead players."
+      ]
+    },
+    {
+      "name": "Gangster",
+      "type": "Traveler",
+      "summary": "Once per day, you may choose to kill 1 of your 2 alive neighbors, if your other alive neighbor agrees.",
+      "howToRun": "Once per day, the Gangster can declare that they wish to use their ability. If so, ask if an alive neighbor agrees. If an alive neighbor agrees, the other alive neighbor dies. If both alive neighbors agree, the Gangster chooses which alive neighbor dies. If neither alive neighbor agrees, the Gangster may not use their ability today.",
+      "examples": [
+        "The Gangster sits between the Empath and the Seer. The Gangster asks the Empath if they want to kill the Seer. The Empath agrees. The Seer dies.",
+        "The Gangster sits between the Alpha Wolf and the Poisoner. The Gangster asks the Alpha Wolf if they want to kill the Poisoner. The Alpha Wolf says no. The Gangster asks the Poisoner if they want to kill the Alpha Wolf. The Poisoner says no. The Gangster cannot use their ability today.",
+        "The Gangster sits between the Investigator and the Librarian. The Gangster asks the Investigator if they want to kill the Librarian. The Investigator agrees. The Gangster asks the Librarian if they want to kill the Investigator. The Librarian also agrees. The Gangster chooses to kill the Investigator."
+      ],
+      "tipsAndTricks": [
+        "Use your ability to eliminate suspicious players. If one of your neighbors is acting suspiciously, try to convince your other neighbor to agree to kill them.",
+        "Pay attention to the dynamics between your neighbors. If they're arguing or suspicious of each other, you might be able to use that to your advantage.",
+        "Be careful about revealing your ability too early. Evil players might try to manipulate you into killing good players.",
+        "Your ability can be used defensively. If you're about to be executed, you might be able to use your ability to eliminate a threat first."
+      ],
+      "bluffingAs": [
+        "You can use your Gangster ability to save evil players from execution. If an evil player is your neighbour and is about to be executed, you can kill your other neighbour instead, which will end the nomination process.",
+        "Pay attention to which of your neighbours wants to kill the other. If a good player is eager to kill another good player, they might be the Village Idiot, or they might have been given false information by the Poisoner."
+      ]
+    },
+    {
+      "name": "Bureaucrat",
+      "type": "Traveler",
+      "summary": "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
+      "howToRun": "Each night, wake the Bureaucrat. They point at any player. Mark the chosen player with the Bureaucrat's 3 VOTES reminder. Put the Bureaucrat to sleep. Each time you tally the vote of a player marked 3 VOTES, count it as three votes instead of one. (Count this out loud, as normal.)",
+      "examples": [
+        "The Bureaucrat chooses Evin. The next day, when the first vote is being tallied, the Storyteller counts '1... 2... 3... 4-5-6... 7.' The nominated player now has seven votes for their execution, and the nomination process continues.",
+        "The Bureaucrat chooses Filip. The next day, Filip has a triple vote, which he uses during four nominations.",
+        "The Bureaucrat chooses Douglas, who is dead. The next day, Douglas uses his vote token to vote, and his vote counts as triple."
+      ],
+      "tipsAndTricks": [
+        "Choose players you trust to have triple voting power. This can help ensure that the right players get executed.",
+        "Coordinate with the player you choose. Let them know they have triple votes so they can use them strategically.",
+        "Be careful about choosing players who might be evil. Giving an evil player triple votes can be very dangerous.",
+        "You can choose dead players too. Their vote tokens will count as triple votes."
+      ],
+      "bluffingAs": [
+        "Don't choose evil players ALL the time - that will look too suspicious. If you just choose the Demon over and over again, the good team has reason to believe that you are evil, as good Bureaucrats tend to change their minds more often.",
+        "Another strategy is to choose good players until the perfect moment arises. This works best if the players you choose for the first half of the game are not only good, but believed to be good by the group.",
+        "Choose an evil player on the final day. Although it might be tempting to choose a good player on the final day, so that you look more trustworthy, a good player having triple voting power is a huge danger to your team.",
+        "Choose dead evil players, if you can justify your reason for doing so. The dead are generally more trustworthy than the living, so giving a dead Minion triple votes not only helps your image, but gets that brutal extra two votes for the evil teams' desired nominee."
+      ]
+    },
+    {
+      "name": "Butcher",
+      "type": "Traveler",
+      "summary": "Each day, after the 1st execution, you may nominate again.",
+      "howToRun": "Each day, immediately after a player is executed, the Butcher may nominate a player for execution. (Remind them if needed.) To succeed, this nomination must tally votes of at least half the alive players, as normal, but does not have to exceed the votes of the execution that prompted the Butcher ability. If this second execution succeeds, it does not allow the Butcher to nominate a third player.",
+      "examples": [
+        "The Witch is executed and dies. The Butcher then nominates the Sage, who gets enough votes to be executed. The Sage dies too.",
+        "The Bone Collector is exiled, and then the Harlot is exiled. There are no executions today. The Butcher does not get to nominate again, because exiles are not executions.",
+        "The Butcher nominates the Town Crier, but the Town Crier is not executed. The Mathematician gets more votes and is executed today. The game continues, and the Butcher nominates the Town Crier again. This time, enough hands are raised, and the Town Crier is executed."
+      ],
+      "tipsAndTricks": [
+        "Only nominate players that you think you can execute. Executing 2 players per day is extremely helpful to the good team. Instead of 1 player dying during the day by the choice of the group and 1 player dying at night (by the choice of the Demon), there will be 2 players dying per day by the choice of the group for every player that dies at night by choice of the Demon.",
+        "During the normal voting process, pay attention to which players get a lot of votes, but are not executed, and which players don't get many votes, but are not executed. Players that get an overwhelming number of votes are unlikely to be the Demon, since Minions rarely vote for the Demon in such dangerous circumstances.",
+        "If the group keeps failing to vote for the players that you nominate, or if the group is talking about exiling you, then you can make a deal with them - you will nominate who they want you to nominate. Staying alive is better than being dead, even if it means that you go with the group's guesses instead of your own.",
+        "If there is an Evil Twin in the game, be much more frugal with your nominations. If the Demon and the Evil Twin are both still alive when just 3 players are alive, it is possible that evil has already won.",
+        "If the Witch curses you, this is great news! An Evil Witch will definitely want to keep an evil Butcher alive, so that fact that the Witch cursed you instead of a much more valuable target, basically confirms to the group that you are good."
+      ],
+      "bluffingAs": [
+        "Nominate. Nominate. Nominate. Vote. Vote. Vote. If you can secure an extra successful execution each day, then an evil victory is basically certain. Evil Butchers are incredibly dangerous.",
+        "You know who the Demon is. Never nominate them using your ability. If even half the group votes, no other nominees can be nominated to exceed that tally, so there is no way to fix a foolish mistake.",
+        "If you really, really think that the good team trusts the Demon player, nominate them using your ability. You need to be certain that even half the group won't vote for the Demon, and be prepared for the good team to think that you are evil.",
+        "Nominate Minions using your ability. Or don't. Whatever you think is best.",
+        "If an Evil Twin, a Witch, or a Cerenovus are in play, co-ordinate with them to see if you can quickly get the number of living players to just 3 - the Evil Twin, the good twin, and the Demon. At this point, evil has usually already won."
+      ]
+    },
     {
       "name": "Scapegoat",
       "type": "Traveler",
