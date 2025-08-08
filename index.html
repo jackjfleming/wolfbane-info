@@ -289,7 +289,7 @@
                     ...rolesData.townsfolk.map(role => ({ ...role, team: 'Townsfolk', ability: createDetailedAbility(role) })),
                     ...rolesData.outsiders.map(role => ({ ...role, team: 'Outsider', ability: createDetailedAbility(role) })),
                     ...rolesData.minions.map(role => ({ ...role, team: 'Minion', ability: createDetailedAbility(role) })),
-                    ...rolesData.demons.map(role => ({ ...role, team: 'Demon', ability: createDetailedAbility(role) })),
+                    ...rolesData.demons.map(role => ({ ...role, team: 'Alpha Wolf', ability: createDetailedAbility(role) })),
                     ...rolesData.travelers.map(role => ({ ...role, team: 'Traveler', ability: createDetailedAbility(role) }))
                 ];
                 console.log('Loaded', roles.length, 'roles from JSON');
@@ -345,13 +345,30 @@
             function getRandomTip(role) {
                 const allTips = [];
 
-                // Add tips and tricks
-                if (role.tipsAndTricks && role.tipsAndTricks.length > 0) {
-                    allTips.push(...role.tipsAndTricks.map(tip => ({ type: 'tip', content: tip })));
+                // For Travelers: Handle tipsAndTricksGood and tipsAndTricksEvil arrays
+                if (role.team === 'Traveler') {
+                    if (role.tipsAndTricksGood && role.tipsAndTricksGood.length > 0) {
+                        allTips.push(...role.tipsAndTricksGood.map(tip => ({ type: 'goodTip', content: tip })));
+                    }
+                    if (role.tipsAndTricksEvil && role.tipsAndTricksEvil.length > 0) {
+                        allTips.push(...role.tipsAndTricksEvil.map(tip => ({ type: 'evilTip', content: tip })));
+                    }
+                    // Also include regular tipsAndTricks if they exist
+                    if (role.tipsAndTricks && role.tipsAndTricks.length > 0) {
+                        allTips.push(...role.tipsAndTricks.map(tip => ({ type: 'tip', content: tip })));
+                    }
+                } else {
+                    // For non-Travelers: Add regular tips and tricks
+                    if (role.tipsAndTricks && role.tipsAndTricks.length > 0) {
+                        allTips.push(...role.tipsAndTricks.map(tip => ({ type: 'tip', content: tip })));
+                    }
                 }
 
-                // Add bluffing entries
-                if (role.bluffingAs && role.bluffingAs.length > 0) {
+                // For Minions and Alpha Wolf: Add bluffing entries with "To Fight:" label
+                if ((role.team === 'Minion' || role.team === 'Alpha Wolf') && role.bluffingAs && role.bluffingAs.length > 0) {
+                    allTips.push(...role.bluffingAs.map(bluff => ({ type: 'fight', content: bluff })));
+                } else if (role.bluffingAs && role.bluffingAs.length > 0) {
+                    // For other roles, use regular bluffing label
                     allTips.push(...role.bluffingAs.map(bluff => ({ type: 'bluff', content: bluff })));
                 }
 
@@ -363,7 +380,25 @@
                 // Return random tip or fallback
                 if (allTips.length > 0) {
                     const randomTip = allTips[Math.floor(Math.random() * allTips.length)];
-                    const prefix = randomTip.type === 'tip' ? '<strong>Tip:</strong> ' : '<strong>Bluffing:</strong> ';
+                    let prefix;
+                    switch (randomTip.type) {
+                        case 'goodTip':
+                            prefix = '<strong>If you\'re good:</strong> ';
+                            break;
+                        case 'evilTip':
+                            prefix = '<strong>If you\'re evil:</strong> ';
+                            break;
+                        case 'fight':
+                            prefix = '<strong>To Fight:</strong> ';
+                            break;
+                        case 'bluff':
+                            prefix = '<strong>Bluffing:</strong> ';
+                            break;
+                        case 'tip':
+                        default:
+                            prefix = '<strong>Tip:</strong> ';
+                            break;
+                    }
                     return prefix + randomTip.content;
                 } else {
                     return role.summary || 'No additional information available.';
