@@ -30,6 +30,7 @@
         .traveler { color: #FFF3CC; }
         
         .role-card {
+            position: relative;
             transition: all 0.3s ease;
             border: 2px solid transparent;
         }
@@ -53,6 +54,22 @@
         .role-icon {
             filter: invert(1) brightness(1.2);
         }
+
+        .new-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: bold;
+            padding: 2px 6px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            z-index: 10;
+        }
+
+
     </style>
 </head>
 <body class="min-h-screen">
@@ -1011,9 +1028,14 @@
 
             const iconSrc = roleImageMap[role.name] || 'images/Artist.svg';
 
+            // List of new roles that should have the NEW badge
+            const newRoles = ['Artist', 'Evil Twin', 'Gangster', 'Butcher', 'Klutz', 'Professor'];
+            const isNewRole = newRoles.includes(role.name);
+
             return `
                 <a href="roles/${role.name.replace(/\s+/g, '-').toLowerCase()}.html"
                    class="role-card block p-4 bg-gray-800 rounded-lg ${colorClass} no-underline">
+                    ${isNewRole ? '<span class="new-badge">NEW</span>' : ''}
                     <div class="flex items-center mb-3">
                         <img src="${iconSrc}" alt="${role.name}" class="role-icon w-12 h-12 mr-3 object-contain">
                         <h3 class="text-lg font-semibold">${role.name}</h3>
