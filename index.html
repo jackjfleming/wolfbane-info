@@ -1146,10 +1146,6 @@
                 console.log('First traveler has tipsAndTricksGood:', !!rolesData.travelers?.[0]?.tipsAndTricksGood);
                 console.log('First traveler has tipsAndTricksEvil:', !!rolesData.travelers?.[0]?.tipsAndTricksEvil);
 
-                // Add visual indicator that JSON loaded
-                document.body.style.border = '5px solid green';
-                document.title = 'JSON LOADED - ' + document.title;
-
                 // Convert JSON structure to flat array for compatibility and create detailed abilities
                 const createDetailedAbility = (role) => {
                     // Map of role names to their original detailed ability descriptions
