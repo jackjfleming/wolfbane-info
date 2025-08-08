@@ -183,6 +183,15 @@
 
     </main>
 
+    <!-- Role Filter Controls -->
+    <div class="fixed top-4 right-4 z-50">
+        <select id="role-filter" class="bg-black bg-opacity-70 text-white border border-gray-600 rounded px-3 py-2 text-sm">
+            <option value="all">All Roles</option>
+            <option value="standard">Standard Roles</option>
+            <option value="new">New Roles</option>
+        </select>
+    </div>
+
     <!-- Navigation Controls -->
     <div class="controls">
         <button id="prev-btn" class="control-btn">
@@ -260,6 +269,9 @@
  
 
             ];
+
+            // Define which roles are "new"
+            const newRoles = ['Artist', 'Professor', 'Gangster', 'Butcher', 'Evil Twin', 'Klutz'];
 
             const slidesContainer = document.getElementById('slides-container');
             const teamColorMap = {
@@ -367,6 +379,9 @@
             roles.forEach(role => {
                 const slideEl = document.createElement('div');
                 slideEl.className = 'slide';
+                // Add data attributes for filtering
+                slideEl.dataset.roleName = role.name;
+                slideEl.dataset.roleType = newRoles.includes(role.name) ? 'new' : 'standard';
                 const iconSrc = roleImageMap[role.name] || 'images/artist.svg';
                 // Use a div for ability-text to allow for block elements like <ul>
                 slideEl.innerHTML = `
@@ -382,8 +397,48 @@
                 renderIcon(placeholder, iconSrc, teamColorMap[role.team]);
             });
 
+            // --- Role Filtering Logic ---
+            const roleFilter = document.getElementById('role-filter');
+            let allSlides = document.querySelectorAll('.slide');
+            let visibleSlides = Array.from(allSlides);
+
+            function filterSlides(filterType) {
+                // Hide all slides first
+                allSlides.forEach(slide => {
+                    slide.style.display = 'none';
+                });
+
+                // Show slides based on filter
+                if (filterType === 'all') {
+                    visibleSlides = Array.from(allSlides);
+                } else if (filterType === 'new') {
+                    visibleSlides = Array.from(allSlides).filter(slide =>
+                        slide.dataset.roleType === 'new'
+                    );
+                } else if (filterType === 'standard') {
+                    visibleSlides = Array.from(allSlides).filter(slide =>
+                        slide.dataset.roleType === 'standard'
+                    );
+                }
+
+                // Show filtered slides
+                visibleSlides.forEach(slide => {
+                    slide.style.display = 'flex';
+                });
+
+                // Reset to first slide of filtered set
+                currentSlide = 0;
+                if (visibleSlides.length > 0) {
+                    showSlide(0);
+                }
+                resetTimer();
+            }
+
+            roleFilter.addEventListener('change', (e) => {
+                filterSlides(e.target.value);
+            });
+
             // --- Slideshow Logic ---
-            const slides = document.querySelectorAll('.slide');
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
             const playPauseBtn = document.getElementById('play-pause-btn');
@@ -400,10 +455,10 @@
             // Function to display a specific slide
             function showSlide(index) {
                 // Reset scroll position of the old slide
-                if (slides[currentSlide]) {
-                    slides[currentSlide].scrollTop = 0;
+                if (visibleSlides[currentSlide]) {
+                    visibleSlides[currentSlide].scrollTop = 0;
                 }
-                slides.forEach((slide, i) => {
+                visibleSlides.forEach((slide, i) => {
                     slide.classList.remove('active');
                     if (i === index) {
                         slide.classList.add('active');
@@ -413,14 +468,16 @@
 
             // Function to go to the next slide
             function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
+                if (visibleSlides.length === 0) return;
+                currentSlide = (currentSlide + 1) % visibleSlides.length;
                 showSlide(currentSlide);
                 resetTimer();
             }
 
             // Function to go to the previous slide
             function prevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                if (visibleSlides.length === 0) return;
+                currentSlide = (currentSlide - 1 + visibleSlides.length) % visibleSlides.length;
                 showSlide(currentSlide);
                 resetTimer();
             }
