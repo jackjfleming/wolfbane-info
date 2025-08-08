@@ -631,10 +631,13 @@
                                                 "summary": "Each night, choose a player: they are poisoned tonight and tomorrow day.",
                                                 "howToRun": "Each night, wake the Poisoner. They point at any player. Put the Poisoner to sleep. Put the Poisoner's POISONED reminder token by the chosen player's character token. The chosen player is poisoned\u2014they have no ability, but the Storyteller acts as if they do.",
                                                 "examples": [
-                                                                "The Poisoner poisons the Empath. The Empath wakes and learns a '1', but this information is false.",
-                                                                "The Poisoner poisons the Hunter. The Hunter uses their ability, but nothing happens because they are poisoned.",
-                                                                "The Poisoner poisons the Mayor. If the Mayor dies tonight, no other player dies instead, because the Mayor has no ability."
-                                                ],
+  "During the night, the Poisoner poisons the Hunter. The next day, the Hunter tries to slay the Alpha Wolf. Nothing happens. The Hunter now has no ability.",
+  "The poisoned Empath, who neighbours two evil players, learns a \"0.” The next night, the Empath, no longer poisoned, learns the correct information: a \"2.”",
+  "The Investigator is poisoned. They learn that one of two players is the Baron, even though neither is a Minion. (Or even the right players, but the wrong Minion type.)",
+  "The Gravedigger is poisoned. Even though the Alpha Wolf died today, they learn that the New in Town died. A few days later, a poisoned Saint dies, and the game continues.",
+  "The Poisoner poisons the Mayor, then becomes the Alpha Wolf. The Mayor is no longer poisoned because there is no Poisoner in play."
+]
+,
                                                 "tipsAndTricks": [
 "Identifying targets for poison is vital. Characters who get information over several nights like the Seer or Gravedigger are great choices if you can find them. You can also make your choice based on the player; players who are strong leaders and rallying the good team or players who are quiet and trying not to attract attention are good options.",
 
