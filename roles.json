@@ -108,7 +108,7 @@
       ],
       "tipsAndTricks": [
         "At the start of the game, your information is not very useful by itself, but can be extremely helpful when combined with the information of your allies. If you can find an Empath, or Seer, then knowing who is Good or Evil, or who is or is not the Alpha Wolf, can be very powerful.",
-        "If an Gravedigger sees that an Evil player was executed, you have information about their neighbours. If you got a '0', their neighbours are likely good, but you should be suspicious of them if you learnt anything higher.",
+        "If an Gravedigger sees that an Evil player was executed, you have information about their neighbors. If you got a '0', their neighbors are likely good, but you should be suspicious of them if you learnt anything higher.",
         "Your information is gained on the first night, so you can reveal it immediately. This can help other information-gathering characters like the Empath or Seer to interpret their own information.",
         "If you get a '0', this is fantastic information! It means that no evil players are sitting next to each other. This means that every evil player is surrounded by good players, which can help you narrow down who is evil.",
         "If you get a high number (like 3 or 4), this suggests that most evil players are sitting in a group. Look for a section of the circle where 3, 4, or 5 players are sitting next to each other, and most of them are probably evil.",
@@ -116,7 +116,7 @@
       ],
       "bluffingAs": [
         "You would have received your information on night one, and so should have it from that point onward. You would have been shown a number of fingers by the Storyteller.",
-        "If you are sitting next to another evil player, claiming a number that is one lower than the actual number can help hide this fact. For example, if there are actually 2 pairs of evil players, but you and the Alpha Wolf are sitting next to each other, claiming that you saw '1' instead of '2' can help throw suspicion off of your evil neighbour.",
+        "If you are sitting next to another evil player, claiming a number that is one lower than the actual number can help hide this fact. For example, if there are actually 2 pairs of evil players, but you and the Alpha Wolf are sitting next to each other, claiming that you saw '1' instead of '2' can help throw suspicion off of your evil neighbor.",
         "Claiming a high number when the actual number is low can cause the good team to become very suspicious of each other, and can cause them to execute good players who happen to be sitting next to other good players that seem suspicious.",
         "Be wary of the Recluse! If you know that they're sat next to an Evil player, telling the group that there are Evil pairs may accidentally condemn your teammate to an early grave."
       ]
@@ -127,19 +127,19 @@
       "summary": "Each night, you learn how many of your 2 alive neighbors are evil.",
       "howToRun": "Each night, wake the Empath. Show the Empath fingers (0, 1, or 2) equaling the number of evil alive neighbors of the Empath. Put the Empath to sleep.",
       "examples": [
-        "The Empath neighbours two good players—a Soldier and a Bodyguard. The Empath learns a '0'.",
+        "The Empath neighbors two good players—a Soldier and a Bodyguard. The Empath learns a '0'.",
         "The next day, the Soldier is executed. That night, the Bodyguard is killed by the Alpha Wolf. The Empath now detects the players sitting next to the Soldier and the Bodyguard, which are a Librarian and an evil Gunslinger. The Empath now learns a '1'.",
         "There are only three players left alive: the Empath, the Alpha Wolf, and the Baron. No matter who is seated where, the Empath learns a '2'."
       ],
       "tipsAndTricks": [
-        "If your neighbours die, you will receive new information on the next nearest living player to you. Getting your neighbours killed means you know more. Coordinating with an Gravedigger to confirm the identities of your neighbours and getting new information down the line is a powerful combo.",
-        "If you get a count of '1' or '2', consider telling your neighbours you got a count of '0' instead. This will make you appear to be the Village Idiot or poisoned, and the evil team may be more inclined to keep you alive since you do not appear to be a threat.",
-        "An Empath is a powerful character, especially as their neighbours die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious."
+        "If your neighbors die, you will receive new information on the next nearest living player to you. Getting your neighbors killed means you know more. Coordinating with an Gravedigger to confirm the identities of your neighbors and getting new information down the line is a powerful combo.",
+        "If you get a count of '1' or '2', consider telling your neighbors you got a count of '0' instead. This will make you appear to be the Village Idiot or poisoned, and the evil team may be more inclined to keep you alive since you do not appear to be a threat.",
+        "An Empath is a powerful character, especially as their neighbors die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious."
       ],
       "bluffingAs": [
         "You wake every night, including the first night, and should have information for each night you are alive. When you reveal that you are the Empath, the good team will expect you to have a detailed explanation of every night's activities.",
-        "Claiming that you got a '1' when you neighbour an evil player, is dangerous, but can pay off. If you are a Successor and claim you got a '1' when sat next to the Alpha Wolf or vice versa can make it look to the rest of the group like if one of you is evil, the other is good.",
-        "An Empath is a powerful character, especially as their neighbours die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious."
+        "Claiming that you got a '1' when you neighbor an evil player, is dangerous, but can pay off. If you are a Successor and claim you got a '1' when sat next to the Alpha Wolf or vice versa can make it look to the rest of the group like if one of you is evil, the other is good.",
+        "An Empath is a powerful character, especially as their neighbors die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious."
       ]
     },
     {
@@ -419,7 +419,7 @@
         "Your ability can be used to replicate many information gathering abilities in the game - providing you can phrase them as a yes/no question! Listen to the claims of the people around you and craft your question to cover weaknesses in the good team's info, or to confirm/deny another person's claims.",
         "Hiding from the Alpha Wolf so they don't kill you before you use your ability is imperative. You can try bluffing as another character, but another option is come out to the town and pretend you have already asked your question. The Alpha Wolf will not consider you as much of a threat if they believe you, and will probably prioritize more dangerous targets that appear to be still getting information.",
         "Don't ask about the Vortox directly. Asking 'is there a Vortox in play' will always result in a 'no' - either there's no Vortox, or there is a Vortox and you're getting false information. To try and detect Vortox, you can instead give a statement that is definitely true (e.g. 'Does 2+2 = 4?') - if the storyteller says 'no', then you know your information has been compromised in some way.",
-        "Another way to inquire after Vortox is to ask after information that can be verified in-game as true. For example: Ask if the Alpha Wolf is among three players (Side note: These three players should not be close enough to be your neighbours, because the No Dashii will confuse your info). If you get a 'Yes', then execute all of them. Then, if the game continues, you know it is probably Vortox. If you get a 'No', then you either know three players who are not the Alpha Wolf, or you know that one of them is most likely the Vortox."
+        "Another way to inquire after Vortox is to ask after information that can be verified in-game as true. For example: Ask if the Alpha Wolf is among three players (Side note: These three players should not be close enough to be your neighbors, because the No Dashii will confuse your info). If you get a 'Yes', then execute all of them. Then, if the game continues, you know it is probably Vortox. If you get a 'No', then you either know three players who are not the Alpha Wolf, or you know that one of them is most likely the Vortox."
       ],
       "bluffingAs": [
         "The Artist can receive practically any information in the game. Use this to your advantage when you are bluffing - giving information that compliments the narrative the evil team is trying to build against the good team.",
@@ -521,7 +521,7 @@
         "If you suspect a Village Idiot is in play, it is important to determine which of the Townsfolk it is as soon as possible. There can only be one Village Idiot in play, so knowing who it is will allow you to treat their information skeptically.",
         "Differentiating the effects of a Village Idiot from a Poisoner can be difficult, but crucial. If only one person seems to be receiving false information, they might be the Village Idiot.",
         "Characters like the Gravedigger and Ravenkeeper will see the Village Idiot character when checking that player. You do not register as a Townsfolk - you just think you are!",
-        "If you have figured out you are the Village Idiot, try to reverse engineer what you know. For example, if you thought you were the Empath and have been getting a read of '0', you should be suspicious that you have at least one evil neighbour after all."
+        "If you have figured out you are the Village Idiot, try to reverse engineer what you know. For example, if you thought you were the Empath and have been getting a read of '0', you should be suspicious that you have at least one evil neighbor after all."
       ],
       "bluffingAs": [
         "You would not know that you are the Village Idiot at first. You would receive a Townsfolk character. The Storyteller would treat you as if you were that Townsfolk.",
@@ -645,7 +645,7 @@
       "howToRun": "Each night, wake the Spy and show them the Grimoire for as long as they need. Put the Spy to sleep.",
       "examples": [
         "The Housekeeper learns that either Abdallah or Douglas is the Ravenkeeper. Abdallah is the Bodyguard, and Douglas is the Spy registering as the Ravenkeeper.",
-        "The Spy neighbours the Alpha Wolf and the Empath. The Chef learns a '1' because the Spy is registering as evil. Later that night, the Empath learns a '0' because the Spy is now registering as good.",
+        "The Spy neighbors the Alpha Wolf and the Empath. The Chef learns a '1' because the Spy is registering as evil. Later that night, the Empath learns a '0' because the Spy is now registering as good.",
         "The Spy nominates the New in Town and is executed by the New in Town's ability, because the Storyteller chooses that the Spy registers as a Townsfolk. That night, the Gravedigger learns that the Village Idiot died today, because the Spy is now registering as the Village Idiot."
       ],
       "tipsAndTricks": [
@@ -776,8 +776,8 @@
         "Your ability can be used defensively. If you're about to be executed, you might be able to use your ability to eliminate a threat first."
       ],
       "tipsAndTricksEvil": [
-        "You can use your Gangster ability to save evil players from execution. If an evil player is your neighbour and is about to be executed, you can kill your other neighbour instead, which will end the nomination process.",
-        "Pay attention to which of your neighbours wants to kill the other. If a good player is eager to kill another good player, they might be the Village Idiot, or they might have been given false information by the Poisoner."
+        "You can use your Gangster ability to save evil players from execution. If an evil player is your neighbor and is about to be executed, you can kill your other neighbor instead, which will end the nomination process.",
+        "Pay attention to which of your neighbors wants to kill the other. If a good player is eager to kill another good player, they might be the Village Idiot, or they might have been given false information by the Poisoner."
       ]
     },
     {
