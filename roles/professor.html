@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professor - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Professor.svg" alt="Professor" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 villager">Professor</h1>
+            <p class="text-xl text-gray-400 mb-4">Townsfolk</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Professor chooses a dead player who is claiming to be the Tea Lady. The player is actually the Lunatic. Nobody is resurrected.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Professor resurrects the Grandmother, who learns a good player's character. At dawn, all players learn the Grandmother player is alive, but not that the player is the Grandmother.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The village idiot Professor chooses to resurrect the Minstrel. Unbeknownst to the Professor, the Minstrel was regurgitated by the Shabaloth and is now alive. The Storyteller shakes their head no, because the Professor must choose a dead player. The Professor chooses the dead Fool instead. Nothing happens because the Professor is village idiot, and the Professor cannot use their ability again.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Use your ability as early as you possibly can! Evil players will really not want to keep you around, so getting your ability to trigger as soon as possible will give you an edge. Additionally, it is more likely that players who die early in the game will be good Townsfolk, since they are in the majority and evil will be protecting each other.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Use your ability as late in the game as you dare! While risky, you can't underestimate how disruptive the resurrection of a confirmed Townsfolk at the end of the game can be for the evil team. The good team will be able to rally around both you and your revived Townsfolk, and the evil team will have a lot less options for disguising themselves as the game has worn on.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Remember that if your ability fails, the dead player is either evil or an Outsider. Don't jump to conclusions right away - you could've targeted a confused Zombuul or Lunatic!</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Resurrect players who died at night, rather than players who were executed. It's not as sure a thing as in other editions, but players who die at night were probably targeted by the Alpha Wolf, and are therefore most likely good.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Resurrect executed players if you believe the town has made a mistake! If your ability works, you have absolved an innocent townsfolk. If it doesn't, well, you can be very sure that they were right to execute them the first time. (Bonus strategy: Reveal yourself to a player you believe to be good, and ask them to be deliberately executed so you can bring them back, proving both of you. Especially effective early in the game!)</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Successfully resurrect a townsfolk, and you are going to be one of the more trustworthy good players in the game. While you won't be totally free of suspicion (the Shabaloth is always a concern), you and your revived Townsfolk will know you can trust each other 100%, and most other players will want to join your circle! Use this to your advantage to rally the good team in the face of evil.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> When picking who to resurrect, consider telling the player ahead of time what you intend to do. Not only does this lend credibility to the fact that you aren't the Shabaloth (since the Storyteller chooses who is regurgitated), but it also means the player can warn you off if they are an outsider who is bluffing as a townsfolk for whatever reason. Additionally, if the player agrees to go along with this plan and doesn't come back, you can be much more confident that they are evil, since they had the chance to stop you and didn't!</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Bluffing As</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> You can't resurrect anyone. Be prepared to explain why your ability failed. The Professor is often a more difficult bluff than other good characters in Bad Moon Rising, so you will need to think ahead.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Claim to have used your Professor ability on a player that the group considers to be suspicious. You can claim to have wanted to 'test' to see if they were actually a Townsfolk or not. Choosing a suspicious player will more likely make you look like the good player, so is more useful if you are a Alpha Wolf as opposed to a Minion.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Claim to have used your ability on a trusted good player. When nothing happens, the group will assume (unless you can convince them that you were village idiot or poisoned for some reason) that one of you is evil. And the odds are, that if they are trusted, you are not. This strategy is more useful if you are a Minion, as being executed can often be a good thing.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If the Alpha Wolf is the Shabaloth, and a player is regurgitated at night, this can look identical to a Professor resurrecting someone. If you think this might happen, or if you have quick wits and can claim in the morning that last night's surprise living player was due to your efforts, you can convince the group that you have used your ability effectively. This is doubly damaging if the regurgitated player was actually a fellow Minion.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If you are good player, bluffing as a Professor that has used their ability (and nothing happened) can be a great way to stay alive long enough to use your actual ability. Alpha Wolfs are usually not interested in attacking Professors that have lost their ability, since they are no longer a threat. For example, if you are the Courtier, but want to ensure that you survive long enough to use your drunking ability, claiming to be a Professor that no longer has an ability will usually let you live long enough to do so.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

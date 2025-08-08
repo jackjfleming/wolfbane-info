@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empath - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Empath.svg" alt="Empath" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 villager">Empath</h1>
+            <p class="text-xl text-gray-400 mb-4">Townsfolk</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">Each night, you learn how many of your 2 alive neighbors are evil.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Empath neighbours two good players—a Soldier and a Bodyguard. The Empath learns a '0'.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The next day, the Soldier is executed. That night, the Bodyguard is killed by the Alpha Wolf. The Empath now detects the players sitting next to the Soldier and the Bodyguard, which are a Librarian and an evil Gunslinger. The Empath now learns a '1'.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>There are only three players left alive: the Empath, the Alpha Wolf, and the Baron. No matter who is seated where, the Empath learns a '2'.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If your neighbours die, you will receive new information on the next nearest living player to you. Getting your neighbours killed means you know more. Coordinating with an Gravedigger to confirm the identities of your neighbours and getting new information down the line is a powerful combo.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you get a count of '1' or '2', consider telling your neighbours you got a count of '0' instead. This will make you appear to be the Village Idiot or poisoned, and the evil team may be more inclined to keep you alive since you do not appear to be a threat.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> An Empath is a powerful character, especially as their neighbours die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Bluffing As</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> You wake every night, including the first night, and should have information for each night you are alive. When you reveal that you are the Empath, the good team will expect you to have a detailed explanation of every night's activities.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Claiming that you got a '1' when you neighbour an evil player, is dangerous, but can pay off. If you are a Successor and claim you got a '1' when sat next to the Alpha Wolf or vice versa can make it look to the rest of the group like if one of you is evil, the other is good.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> An Empath is a powerful character, especially as their neighbours die and they get new information on other players. If you are alive in the late game, it may be seen as suspicious.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

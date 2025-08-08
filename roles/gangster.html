@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangster - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Gangster.svg" alt="Gangster" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 traveler">Gangster</h1>
+            <p class="text-xl text-gray-400 mb-4">Traveler</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">Once per day, you may choose to kill 1 of your 2 alive neighbors, if your other alive neighbor agrees.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Gangster sits between the Empath and the Seer. The Gangster asks the Empath if they want to kill the Seer. The Empath agrees. The Seer dies.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Gangster sits between the Alpha Wolf and the Poisoner. The Gangster asks the Alpha Wolf if they want to kill the Poisoner. The Alpha Wolf says no. The Gangster asks the Poisoner if they want to kill the Alpha Wolf. The Poisoner says no. The Gangster cannot use their ability today.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Gangster sits between the Investigator and the Librarian. The Gangster asks the Investigator if they want to kill the Librarian. The Investigator agrees. The Gangster asks the Librarian if they want to kill the Investigator. The Librarian also agrees. The Gangster chooses to kill the Investigator.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks (If Good)</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're good:</strong> Use your ability to eliminate suspicious players. If one of your neighbors is acting suspiciously, try to convince your other neighbor to agree to kill them.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're good:</strong> Pay attention to the dynamics between your neighbors. If they're arguing or suspicious of each other, you might be able to use that to your advantage.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're good:</strong> Be careful about revealing your ability too early. Evil players might try to manipulate you into killing good players.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're good:</strong> Your ability can be used defensively. If you're about to be executed, you might be able to use your ability to eliminate a threat first.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks (If Evil)</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're evil:</strong> You can use your Gangster ability to save evil players from execution. If an evil player is your neighbour and is about to be executed, you can kill your other neighbour instead, which will end the nomination process.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>If you're evil:</strong> Pay attention to which of your neighbours wants to kill the other. If a good player is eager to kill another good player, they might be the Village Idiot, or they might have been given false information by the Poisoner.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

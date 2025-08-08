@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recluse - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Recluse.svg" alt="Recluse" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 outsider">Recluse</h1>
+            <p class="text-xl text-gray-400 mb-4">Outsider</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">You might register as evil & as a Minion or Alpha Wolf, even if dead.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Investigator chooses the Recluse and the Mayor. The Recluse registers as the Poisoner, so the Investigator learns that one of these players is the Poisoner.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Empath sits next to the Recluse and the Chef. The Recluse registers as evil, so the Empath learns a '1'.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Recluse dies. The Gravedigger chooses the Recluse, and learns that the Baron died today, because the Recluse is registering as the Baron.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Tell the group that you are the Recluse as early as possible. This gives them fair warning that some information they receive may be wrong, and it lets them know that you are a good player.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you are getting suspicious looks from other players, or if someone is claiming that their ability is telling them that you are evil, remind the group that you are the Recluse.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Even though you appear evil to some characters, you are definitely good. Other good characters will be able to trust you, and you should try to help them as much as possible.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Bluffing As</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> You would never wake, learn anything, or act during the day.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> 'I'm not evil, I just register that way' - Since the Recluse registers as evil, it's a great excuse for you to be registering as evil. This can help you avoid heat from characters like the Empath, Seer and even the Investigator!</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Be as helpful to the good team as possible. Tell them early that you are the Recluse and be proactive about finding other Outsiders, making sure information isn't confused, etc.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Use the Recluse as a backup bluff, or stay quiet about your claim for a while - you can eventually reveal and say you have been hiding to confuse evil players by hiding the existence of your Outsider status.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> As the Recluse continues to register as evil even when you are dead, you can maintain this bluff from beyond the grave, even when characters like the Gravedigger or Ravenkeeper have had a read on you.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

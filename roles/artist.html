@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Artist.svg" alt="Artist" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 villager">Artist</h1>
+            <p class="text-xl text-gray-400 mb-4">Townsfolk</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">Once per game, during the day, privately ask the Storyteller any yes/no question.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Artist asks, 'Is the Alpha Wolf sitting in a brown chair?' The Storyteller answers, 'No,' because the Alpha Wolf is in a black chair.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Artist asks, 'Is David the Evil Twin?' and the Storyteller answers, 'Yes,' because David is.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Artist asks, 'How many Minions are alive?' and the Storyteller says, 'Please ask another question. I cannot answer that with a yes, no, or I don't know.'</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>The Artist asks, 'Are we winning?' and the Storyteller answers, 'I don't know,' because even though all the Minions are dead, many good players trust the Alpha Wolf.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Ask your question as soon as you can on the first day! Between the Alpha Wolf and the Pit-Hag, you risk losing your question every day that you do not use it. Using it right away negates this risk. There are a lot of questions you can ask knowing nothing else about the game that will give you a great head-start on detecting where evil is hidden in the town.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Hold onto your question for a few days. This is very risky, since the longer you are alive without using it, the greater chance you won't get to. With that said, Sects & Violets is a game stuffed to the brim with information - waiting to hear people's claims and the information they've got available to them can enable you to ask a much more specific and deadly question that could change the course of the game with a simple 'yes' or 'no'. In particular, characters like the Flowergirl, Town Crier, and Oracle give information that can help you narrow down where the evil lies.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Being too specific with your question (e.g. Is Amy the Alpha Wolf?) will probably result in an unhelpful 'no'. Instead, ask questions that will divide the group into two halves. For example, ask if the Alpha Wolf is sitting in a particular group - yes or no, you have narrowed down where the Alpha Wolf is or isn't. Other questions can include asking if there's a concentration of evil players in a particular location, or asking about characters like the Evil Twin.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you don't have a lot of in-game threads to follow, you can also ask for information outside of the game mechanics and still break the town into groups. For example, if a disproportionate number of players are wearing red shirts. you can ask if the Alpha Wolf is among them!</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Your ability can be used to replicate many information gathering abilities in the game - providing you can phrase them as a yes/no question! Listen to the claims of the people around you and craft your question to cover weaknesses in the good team's info, or to confirm/deny another person's claims.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Hiding from the Alpha Wolf so they don't kill you before you use your ability is imperative. You can try bluffing as another character, but another option is come out to the town and pretend you have already asked your question. The Alpha Wolf will not consider you as much of a threat if they believe you, and will probably prioritize more dangerous targets that appear to be still getting information.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Don't ask about the Vortox directly. Asking 'is there a Vortox in play' will always result in a 'no' - either there's no Vortox, or there is a Vortox and you're getting false information. To try and detect Vortox, you can instead give a statement that is definitely true (e.g. 'Does 2+2 = 4?') - if the storyteller says 'no', then you know your information has been compromised in some way.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Another way to inquire after Vortox is to ask after information that can be verified in-game as true. For example: Ask if the Alpha Wolf is among three players (Side note: These three players should not be close enough to be your neighbours, because the No Dashii will confuse your info). If you get a 'Yes', then execute all of them. Then, if the game continues, you know it is probably Vortox. If you get a 'No', then you either know three players who are not the Alpha Wolf, or you know that one of them is most likely the Vortox.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Bluffing As</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> The Artist can receive practically any information in the game. Use this to your advantage when you are bluffing - giving information that compliments the narrative the evil team is trying to build against the good team.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Ask a question that implicates good players as evil. Some examples could include 'asking' if X character is in play, if Y player is sitting next to an evil player, etc. Every good player the town executes thanks to your dodgy information is an execution they didn't spent on your Alpha Wolf.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Ask a question that indicates your fellow evil players are good! Some examples could include 'asking' if there are more evil players to your left than your right, or if the Alpha Wolf is sitting somewhere you know they're aren't, or even if X character is in play (when it is actually a bluff being utilized by an evil player). Absolving evil players of guilt in the eyes of the town will see them turn their efforts elsewhere, waiting time on players who are not so much of a threat.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Decide whether your information is going to contradict the good team's information or not. This is riskier as a Alpha Wolf, since if you contradict, the good team will likely kill you out of suspicion. As a Minion, you can be more deliberate about setting up a counter-argument, since your execution is not the end of the game, and if you manage to convince the group of something false in the meantime, all the better!</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Beware of the Vortox - if you know one is in play, you'll have to be careful about giving 'true' information, since the Vortox would make your 'good' information false.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Don't reveal this bluff right away - in the early game, an Artist who has asked their question is prime bait for a mercy execution to appease a potential Vortox. If you're that Vortox, that would be an embarrassing end!</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

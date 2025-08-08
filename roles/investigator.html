@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigator - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Investigator.svg" alt="Investigator" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 villager">Investigator</h1>
+            <p class="text-xl text-gray-400 mb-4">Townsfolk</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">You start knowing that 1 of 2 players is a particular Minion.</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>Amy is the Baron, and Julian is the Mayor. The Investigator learns that either Amy or Julian is the Baron.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>Angelus is the Spy, and Lewis is the Poisoner. The Investigator learns that either Angelus or Lewis is the Spy.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>Brianna is the Recluse, and Marianna is the Alpha Wolf. The Investigator learns that either Brianna or Marianna is the Poisoner. (This happens because the Recluse is registering as a Minion—in this case, the Poisoner.)</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Tell the group what your information is as soon as possible on the first day. You probably won't be able to determine which of the two players is the Minion, but if you are believed, then the good team will probably have enough time to execute both players, guaranteeing that a Minion is dead on the final day.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Whilst your information by itself will probably not be enough to condemn a specific player, it might combine well with another good player's information, such as the Empath or the Chef. If you trust them, you can team up to execute a Minion early in the game, which removes their voting power and gives you an advantage.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you have a strong suspicion regarding one of the 2 players shown to you, simply say nothing and study their behaviour. If they continually come to the defense of a particular player, that player is likely the Alpha Wolf.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Instead of revealing your information publicly, confide in other members of the town secretly. Someone else may have information that exonerates or condemns one of your choices, and it may be easier to persuade them to tell you what they know in secret.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you learn that a Successor or a Poisoner is in play, it becomes all the more important to execute them as soon as you can! They have powerful abilities that can continue to disrupt the Good team for as long as they are in play.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> All minions are dangerous. Even if you learn of a Baron or a Spy, it remains important to execute them. Even if doing so doesn't prevent them from mechanically affecting the game, they still retain their voting and nomination power, and may even go on to become the Alpha Wolf!</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> If you learn that any minion other than the Baron is in play in a game with only one minion, you know exactly how many outsiders there are. If more than that number are claiming to be outsiders, then you know that at least one of them is lying.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Beware the Recluse! They may register as a Minion to you. If one of the players you detect is actually the Recluse, the second player could be literally anything, including the Minion you were shown.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Even though one of the players you detect is a Minion, that does not necessarily mean that the other player is good.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Bluffing As</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> You would have received your information on night one, and so should have it from that point onward. You will have been shown two players and one Minion token.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Pick two Good players, and claim that one of them is a Minion to try to get get those players executed. Choosing the Poisoner or Successor is usually best if you want the good team to be motivated to execute them both.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If you are the Alpha Wolf, or even an ambitious Minion, telling the good team an actual Minion can make you look extremely trustworthy, particularly if other good players like the Gravedigger support your information.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If you falsely claim that a Baron is in play, another evil player will need to claim to be an Outsider at some point. Otherwise, good will eventually question why there is not the appropriate number of Outsiders in play for a Baron and probably execute you.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Communicating your information secretly to one or two good players can sow an enormous amount of distrust. They will often tear themselves apart without you having to do much more.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> Claiming to have seen a Minion that is not actually in play can cause much confusion, or back up other evil players' bluffs. For example, bluffing that a Baron is in play will help confirm a Alpha Wolf who is bluffing as an Outsider.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If an actual Investigator has already publicly come out with their information, and you are not one of their targets, claiming to be the real Investigator and telling the group that they were one of your two shown Minions can be a great way to make them look Evil.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Bluffing:</strong> If you are the Spy, or have access to a Spy, they can be invaluable in providing you with powerful targets to undermine with your accusation.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successor - Wolf's Bane Role Reference</title>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+        
+        /* Custom colors for roles */
+        .villager { color: #A0C5E8; }
+        .outsider { color: #D0E2F3; }
+        .minion { color: #F5CBCC; }
+        .alpha-wolf { color: #EA9999; }
+        .traveler { color: #FFF3CC; }
+        
+        .back-button {
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            transform: translateX(-2px);
+        }
+        
+        .role-icon {
+            max-width: 150px;
+            max-height: 150px;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Navigation -->
+        <nav class="mb-8">
+            <a href="../" class="back-button inline-flex items-center text-blue-400 hover:text-blue-300 no-underline">
+                ← Back to Role Index
+            </a>
+        </nav>
+
+        <!-- Role Header -->
+        <header class="text-center mb-12">
+            <div class="mb-6">
+                <img src="../images/Successor.svg" alt="Successor" class="role-icon mx-auto">
+            </div>
+            <h1 class="text-4xl font-bold mb-2 minion">Successor</h1>
+            <p class="text-xl text-gray-400 mb-4">Minion</p>
+            <div class="bg-gray-800 p-6 rounded-lg">
+                <p class="text-lg">If there are 5 or more players alive & the Alpha Wolf dies, you become the Alpha Wolf. (Travelers don't count.)</p>
+            </div>
+        </header>
+
+        <!-- Role Details -->
+        <div class="space-y-8">
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Examples</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>There are seven players alive: the Alpha Wolf, the Successor, two Townsfolk, and three Travelers. The Alpha Wolf is executed, so the game ends and good wins because Travelers do not add to the player count for the Successor's ability.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>There are five players alive: the Alpha Wolf, the Successor, the Baron, and two Townsfolk. The Alpha Wolf is executed. The Successor becomes the Alpha Wolf, and the game continues.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p>Brianna is the Successor. The Seer chooses Brianna and Alex, and learns a 'no.' Later, the Alpha Wolf dies, so Brianna becomes the Alpha Wolf. The Seer chooses Brianna and Alex again, and learns a 'yes.'</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">Tips & Tricks</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> The Successor is at her strongest when you co-ordinate with the Alpha Wolf and figure out a strategy that you both like, since the Alpha Wolf can safely die.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> Whilst you are the Successor, you will not register as the Alpha Wolf. So, if you can get yourself confirmed as such by good characters, such as the Hunter or the Seer, then become the Alpha Wolf at a later stage, then the good team will be very confused about the identity of the real Alpha Wolf.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>Tip:</strong> The Alpha Wolf and the Successor may co-ordinate on their bluffs to confirm each other. For example, the Successor may claim to be the Housekeeper and 'confirm' the Alpha Wolf's claim.</p>
+        </div>
+    </div>
+</section>
+<section class="mb-8">
+    <h3 class="text-2xl font-semibold mb-4">To Fight</h3>
+    <div class="space-y-3">
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>To Fight:</strong> When the Successor is in play, the Alpha Wolf can get away with doing certain things they would not be able to otherwise. For example, they can be successfully executed, or die by a Hunter's ability and the game will continue.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>To Fight:</strong> If the Alpha Wolf kills themselves at night, the Alpha Wolfhood must always pass to the Successor first before any other Minions.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>To Fight:</strong> The Successor does not register as a Alpha Wolf, which means characters who detect Alpha Wolfs specifically will appear to get a clean read on them.</p>
+        </div>
+        <div class="bg-gray-800 p-4 rounded-lg">
+            <p><strong>To Fight:</strong> Unlike other Minions, the Successor can be bolder about targeting their own Alpha Wolf, and may even deliberately try to get them killed to make themselves look better.</p>
+        </div>
+    </div>
+</section>
+        </div>
+    </div>
+</body>
+</html>
